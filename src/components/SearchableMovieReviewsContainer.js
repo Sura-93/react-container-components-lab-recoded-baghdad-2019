@@ -14,11 +14,11 @@ export default class SearchableMovieReviewsContainer extends Component {
      reviews: [],
      searchTerm:""
    }
-   
+
  }
  render() {
    return (
-     <div className="searchable-movie-reviews"> 
+     <div className="searchable-movie-reviews">
      <form  onSubmit={event => this.handleSubmit(event)}>
                    <input type="text" placeholder="enter movie" onChange={event => this.handleChange(event)} />
                    <button type="submit">Search</button>
