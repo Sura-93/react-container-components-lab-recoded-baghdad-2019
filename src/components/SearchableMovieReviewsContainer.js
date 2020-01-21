@@ -14,7 +14,17 @@ export default class SearchableMovieReviewsContainer extends Component {
      reviews: [],
      searchTerm:""
    }
-
+handleChange = (event) => {
+  this.setState({
+    searchTerm:event.target.value
+  })
+}
+ handleSubmit = (event) => {
+   event.preventDefault()
+   fetch(URL + '&query=' + this.state.searchTerm)
+              .then(res => res.json())
+              .then(json => this.setState({
+                  reviews: json.results
  }
  render() {
    return (
@@ -28,3 +38,4 @@ export default class SearchableMovieReviewsContainer extends Component {
            </div>
    )
  }
+}
