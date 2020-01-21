@@ -17,3 +17,8 @@ componentDidMount (){
     reviews:json.results
   }))
 }
+render () {
+  return (
+    <div className="latest-movie-reviews"><MovieReviews Reviews={this.state.reviews} </div>
+  )
+}
