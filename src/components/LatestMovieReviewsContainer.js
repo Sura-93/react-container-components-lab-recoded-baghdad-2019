@@ -22,3 +22,4 @@ render () {
     <div className="latest-movie-reviews"><MovieReviews Reviews={this.state.reviews} </div>
   )
 }
+}
